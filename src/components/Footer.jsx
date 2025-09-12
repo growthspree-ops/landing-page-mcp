@@ -4,24 +4,24 @@ import { Mail, Instagram, Linkedin, Twitter } from "lucide-react";
 const Footer = () => {
   return (
     <footer
-      className="py-12 px-6 md:px-16"
-      style={{ background: "linear-gradient(to bottom, #E3FDFD, #CBF1F5, #A6E3E9, #71C9CE)" }}
+      className="py-12 px-6 md:px-16 bg-[#00143D]"
+      
     >
-      <div className="max-w-7xl mx-auto text-gray-700">
+      <div className="max-w-7xl mx-auto text-white">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
           {/* Contact Info */}
           <div>
-            <h2 className="text-2xl font-bold mb-2" style={{ color: "#071E3D" }}>
+            <h2 className="text-2xl font-bold mb-2" >
               We Would Love To Hear From You
             </h2>
-            <p className="text-gray-500 mb-4" style={{ color: "#033F4D" }}>
+            <p className="text-gray-500 mb-4" >
               Please reach out to us for any questions and feedbacks
             </p>
             <a
               href="mailto:contact@growthspree.in"
               className="flex items-center gap-2 font-semibold hover:text-teal-600"
-              style={{ color: "#0A3F3D" }}
+              
             >
               contact@growthspree.in <Mail className="w-4 h-4" />
             </a>
@@ -29,29 +29,29 @@ const Footer = () => {
 
           {/* Address */}
           <div>
-            <h3 className="text-lg font-semibold mb-2" style={{ color: "#033F4D" }}>
+            <h3 className="text-lg font-semibold mb-2">
               Our Address
             </h3>
-            <p className="mb-2" style={{ color: "#055F66" }}>
+            <p className="mb-2" >
               B-117, Sector 2, Noida, Uttar Pradesh 201301
             </p>
-            <p className="font-medium" style={{ color: "#071E3D" }}>+91 70456 38498</p>
+            <p className="font-medium" >+91 70456 38498</p>
           </div>
 
           {/* Social Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-2" style={{ color: "#033F4D" }}>
+            <h3 className="text-lg font-semibold mb-2" >
               Follow Us
             </h3>
-            <p className="mb-3" style={{ color: "#055F66" }}>growthspreeofficial</p>
+            <p className="mb-3" >growthspreeofficial</p>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-pink-500 transition" style={{ color: "#0A3F3D" }}>
+              <a href="#" className="hover:text-pink-500 transition" >
                 <Instagram className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-blue-600 transition" style={{ color: "#0A3F3D" }}>
+              <a href="#" className="hover:text-blue-600 transition" >
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-blue-400 transition" style={{ color: "#0A3F3D" }}>
+              <a href="#" className="hover:text-blue-400 transition" >
                 <Twitter className="w-6 h-6" />
               </a>
             </div>
@@ -59,7 +59,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 text-sm" style={{ color: "#033F4D" }}>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 text-sm" >
           <div>
             <h4 className="font-semibold mb-3">Links</h4>
             <ul className="space-y-2">

@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
+
 
 const HubspotForm = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstname: "",
     lastname: "",
     email: "",
-    role: "",
+    hs_role: "",
     website: "",
   });
 
@@ -19,11 +22,13 @@ const HubspotForm = () => {
   };
 
   const handleSubmit = async (e) => {
+    
     e.preventDefault();
 
     try {
+      
       const response = await fetch(
-        "https://api.hsforms.com/submissions/v3/integration/submit/{portalId}/{formGuid}", // 🔗 Replace with your HubSpot Form URL
+        "https://api.hsforms.com/submissions/v3/integration/submit/21984071/08cce701-15c9-4839-abe9-b70afadd256d", // 🔗 Replace with your HubSpot Form URL
         {
           method: "POST",
           headers: {
@@ -34,22 +39,24 @@ const HubspotForm = () => {
               { name: "firstname", value: formData.firstname },
               { name: "lastname", value: formData.lastname },
               { name: "email", value: formData.email },
-              { name: "role", value: formData.role },
+              { name: "hs_role", value: formData.hs_role },
               { name: "website", value: formData.website },
             ],
           }),
         }
       );
 
+      
       if (response.ok) {
         setStatus("✅ Form submitted successfully!");
         setFormData({
           firstname: "",
           lastname: "",
           email: "",
-          role: "",
+          hs_role: "",
           website: "",
         });
+        navigate("/thank-you");
       } else {
         setStatus("❌ Something went wrong. Please try again.");
       }
@@ -110,14 +117,14 @@ const HubspotForm = () => {
           />
         </div>
 
-        {/* Role */}
+        {/* hs_role */}
         <div className="mt-4">
           <label className="block text-teal-800 font-medium mb-2">
             Your current role is
           </label>
           <select
-            name="role"
-            value={formData.role}
+            name="hs_role"
+            value={formData.hs_role}
             onChange={handleChange}
             className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400 border-teal-300 text-gray-800 bg-white"
           >
@@ -154,7 +161,7 @@ const HubspotForm = () => {
         {/* Submit */}
         <button
           type="submit"
-          className="mt-6 w-full bg-teal-600 hover:bg-teal-700 text-white py-3 rounded-lg font-semibold transition duration-300"
+          className="mt-6 w-full bg-[#F6CD7A] hover:bg-[#F6CD7A] text-white py-3 rounded-lg font-semibold transition duration-300"
         >
           Submit
         </button>

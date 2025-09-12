@@ -30,10 +30,10 @@ export default function SolutionSection() {
   ];
 
   return (
-    <section className="bg-[#052A2B] text-white py-16 px-6">
+    <section className="bg-[#071F4E] text-white py-16 px-6">
       {/* Header */}
       <div className="max-w-4xl mx-auto text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-teal-200">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#F6CD7A]">
           The Solution
         </h2>
         <p className="mt-4 text-lg text-gray-300">
@@ -48,17 +48,17 @@ export default function SolutionSection() {
           return (
             <div
               key={idx}
-              className="flex flex-col items-start bg-[#073737] p-6 rounded-2xl shadow-lg hover:scale-105 hover:shadow-teal-600/30 transition-all"
+              className="flex flex-col items-start bg-[#00143D] p-6 rounded-2xl shadow-lg hover:scale-105 hover:shadow-teal-600/30 transition-all"
             >
               <div className="flex items-center space-x-4 mb-4">
                 <div className="p-3 bg-[#0B4A4A] rounded-xl">
                   <Icon className="w-8 h-8 text-teal-300" />
                 </div>
-                <h3 className="text-xl font-semibold text-teal-100">
+                <h3 className="text-xl font-semibold text-[#F6CD7A]">
                   {feature.title}
                 </h3>
               </div>
-              <p className="text-gray-400">{feature.description}</p>
+              <p className="text-white">{feature.description}</p>
             </div>
           );
         })}
