@@ -165,6 +165,9 @@ const HubspotForm = () => {
         >
           Submit
         </button>
+        <div className="w-full mt-2">
+          <p className="flex justify-center text-gray-800 text-md font-semibold">Free Forever!</p>
+        </div>
 
         {/* Status Message */}
         {status && <p className="mt-4 text-center text-sm text-gray-700">{status}</p>}

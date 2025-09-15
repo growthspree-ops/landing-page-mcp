@@ -16,7 +16,7 @@ const HeroSection = () => {
                 Your Marketing Analyst Who Never Sleeps
               </h1>
               <p className="mt-4 text-lg md:text-xl text-[#fff]">
-                Get insights, brainstorm ideas, and create the plan for the next quarter in minutes with your personal AI marketing analyst.
+                Harness the power of Claude AI and open-source technology to make data-driven decisions and boost your ad results.
               </p>
               <p className="mt-2 text-lg font-semibold text-[#fff]">
                 Onboard Today!
