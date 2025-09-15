@@ -3,45 +3,111 @@ import { Plus, Minus } from "lucide-react"; // install lucide-react for icons
 
 const faqs = [
   {
-    question: "Where does my ad-account data live?",
+    question: " What is Google Ads MCP?",
     answer:
-      "Your ad-account data always stays within Meta (Facebook/Instagram) or Google Ads servers. This app only fetches and displays data securely using APIs, without storing sensitive ad information permanently."
+      "Google Ads MCP (Model Context Protocol) is a modern, AI-integrated layer built to make managing, optimizing, and analyzing your Google Ads campaigns smarter, faster, and more intuitive."
   },
   {
-    question: "What can I do with it today?",
+    question: "How is this different from Google's MCC (My Client Center)?",
     answer:
-      "You can monitor campaigns, analyze performance metrics, and set automated workflows or alerts to optimize your ad spend more effectively."
+      "While MCC gives you access to multiple accounts, MCP adds AI-driven intelligence, contextual understanding, and automated insights on top of that data. It’s like MCC, but supercharged."
   },
   {
-    question: "Can it actually change budgets or duplicate ad-sets for me?",
-    answer:
-      "Yes. With the right permissions, it can automatically adjust budgets, pause/activate campaigns, or duplicate ad-sets to improve performance."
+    question: " Who is this platform for?",
+    answer: `The platform is ideal for:
+<ul class="list-disc list-inside text-white style="margin-top:8px; margin-left:20px; line-height:1.6;">
+  <li>Agencies managing multiple clients</li>
+  <li>PPC professionals and freelancers</li>
+  <li>Growth marketers and in-house teams</li>
+  <li>Anyone looking to reduce manual ad analysis and boost performance</li>
+</ul>`
   },
   {
-    question: "Does it work with Google Ads or HubSpot?",
+    question: "What role does Claude play in MCP?",
     answer:
-      "Currently it is optimized for Meta Ads. Integrations with Google Ads and HubSpot may be available depending on your plan or upcoming releases."
+      `Claude is integrated directly into the platform to help:
+<ul class="list-disc list-inside text-white style="margin-top:8px; margin-left:20px; line-height:1.6;">
+  <li>Analyze campaign performance</li>
+  <li>Surface optimization opportunities</li>
+  <li>Interpret performance metrics in plain English</li>
+  <li>Generate ad copy or A/B test variants</li>
+  <li>Answer your marketing questions conversationally</li>
+</ul>`
   },
   {
-    question: "How is this different from regular Meta automated rules?",
+    question: "Can Claude suggest improvements to my campaigns?",
     answer:
-      "Unlike basic automated rules, this system uses AI-driven logic, allowing more flexible, personalized, and adaptive optimizations instead of static rules."
+      "Yes! Claude can recommend bid adjustments, pause underperforming keywords, highlight low-ROAS campaigns, and even suggest new audiences to test — all based on your data."
   },
   {
-    question: "Do I need to be a “prompt-engineer”?",
+    question: "Will Claude generate an ad copy?",
     answer:
-      "No. The tool is designed with a simple UI so you don’t need technical expertise. It abstracts away prompts and provides an easy experience."
+      "No, this is not supported in current version"
   },
   {
-    question: "Does it create new ads or videos like Icon?",
+    question: " Does Claude understand natural language?",
     answer:
-      "No, this tool focuses on optimizing your campaigns. It does not generate creative assets like images or videos."
+      `Absolutely. Ask questions like:
+<ul class="list-disc list-inside text-white style="margin-top:8px; margin-left:20px; line-height:1.6;">
+  <li>"Which campaigns dropped in performance last week?"</li>
+  <li>"What ad creatives are converting best?"</li>
+  <li>"Give me 3 new headline variations for my top-performing ad set."</li>
+  <li>Generate ad copy or A/B test variants</li>
+  <li>Answer your marketing questions conversationally</li>
+</ul>`
   },
   {
-    question: "How much does it cost?",
+    question: "What kind of insights does MCP provide?",
     answer:
-      "Pricing depends on your usage and plan. Some tiers may be free for limited use, while advanced automation comes under paid plans."
-  }
+      `You get:
+<ul class="list-disc list-inside text-white style="margin-top:8px; margin-left:20px; line-height:1.6;">
+  <li>"Real-time campaign insights"</li>
+  <li>"AI-powered recommendations"</li>
+  <li>"Natural language reporting"</li>
+  <li>Budget efficiency analysis</li>
+  <li>ROAS trends and forecasts</li>
+</ul>`
+  },
+  {
+    question: "Can I connect multiple Google Ads accounts?",
+    answer:
+      "Yes. The platform supports unlimited Google Ads account connections using your Google MCC."
+  },
+  {
+    question: "Do I need technical skills to use it?",
+    answer:
+      "Not at all. The interface is user-friendly, and Claude simplifies everything by letting you query your data conversationally."
+  },
+  {
+    question: " Is reporting included?",
+    answer:
+      "Yes. Generate one-click reports for internal use or clients. You can even ask Claude to summarize performance in bullet points or in a client-ready paragraph format."
+  },
+  {
+    question: "Is my Google Ads data secure?",
+    answer:
+      "Yes. We use industry-standard encryption (TLS/SSL), secure OAuth 2.0 authentication, and follow best practices for data storage and access control."
+  },
+  {
+    question: "Is my data used to train Claude or other models?",
+    answer:
+      "No. Your data is never used to train AI models, including Claude. All processing happens securely within your session."
+  },
+  {
+    question: "Is there a free trial available and what is the cost?",
+    answer:
+      "This is an open source version and fully free, which will be hosted on your desktop"
+  },
+  {
+    question: "How long does setup take?",
+    answer:
+      "You can be up and running in under 5 minutes. Simply connect your Google Ads account and start receiving insights instantly."
+  },
+  {
+    question: "Do you offer onboarding support?",
+    answer:
+      "Yes. Book a 15 minutes call with us here -"
+  },
 ];
 
 export default function FAQ() {
@@ -72,7 +138,7 @@ export default function FAQ() {
             </button>
 
             {openIndex === index && (
-              <p className="mt-3 text-[#fff]">{faq.answer}</p>
+              <div className="mt-3 text-[#fff]" dangerouslySetInnerHTML={{ __html: faq.answer }}/>
             )}
           </div>
         ))}
