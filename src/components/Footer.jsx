@@ -45,13 +45,13 @@ const Footer = () => {
             </h3>
             <p className="mb-3" >growthspreeofficial</p>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-pink-500 transition" >
+              <a href="https://www.instagram.com/growthspreeofficial/" className="hover:text-pink-500 transition" >
                 <Instagram className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-blue-600 transition" >
+              <a href="https://www.linkedin.com/company/growthspree-digital-marketing-consulting/" className="hover:text-blue-600 transition" >
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-blue-400 transition" >
+              <a href="https://twitter.com/thegrowthspree" className="hover:text-blue-400 transition" >
                 <Twitter className="w-6 h-6" />
               </a>
             </div>
