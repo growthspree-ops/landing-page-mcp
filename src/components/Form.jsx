@@ -67,7 +67,7 @@ const HubspotForm = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center items-center bg-white">
       <form
         onSubmit={handleSubmit}
         className="bg-white shadow-lg rounded-xl p-8 w-full max-w-lg border border-teal-200"
@@ -165,9 +165,7 @@ const HubspotForm = () => {
         >
           Submit
         </button>
-        <div className="w-full mt-2">
-          <p className="flex justify-center text-gray-800 text-md font-semibold">Free Forever!</p>
-        </div>
+      
 
         {/* Status Message */}
         {status && <p className="mt-4 text-center text-sm text-gray-700">{status}</p>}
