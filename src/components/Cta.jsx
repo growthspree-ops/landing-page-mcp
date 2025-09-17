@@ -10,7 +10,7 @@ const CallToAction = () => {
   return (
     <div className="flex items-center justify-center  py-20 px-4 bg-[#071F4E]">
       <div className="text-center max-w-xl">
-        <h2 className="text-3xl md:text-3xl font-bold text-[#F6CD7A] whitespace-nowrap">
+        <h2 className="text-3xl md:text-3xl font-bold text-[#F6CD7A] md:whitespace-nowrap">
           No More "We'll Get Back to You Tomorrow"
         </h2>
         <p className="mt-3 text-sm md:text-lg text-white">
